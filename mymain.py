@@ -42,7 +42,7 @@ class My_Form(Ui_Form,QtWidgets.QWidget):  # 继承自UI_Diglog类，注意我�
         self.lineEdit_2.setText(root_path)
         for root, dirs, files in os.walk(root_path):  # root, dirs不能删掉，否则程序报错
             for file_name in files:
-                absfile_name = os.path.join(root_path, file_name)
+                absfile_name = os.path.join(root, file_name)
                 if file_name[-4:] == ".msg":
                     counter_ = CounterA()  # 邮件数量统计
                     i = counter_()
